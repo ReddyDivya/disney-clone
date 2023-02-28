@@ -1,0 +1,42 @@
+My Learnings while developing disney-clone
+
+images
+------------------
+use svg for clarity
+
+CSS
+-----------
+scroll-behavior: smooth;
+box-sizing: border-box;
+media-queries
+install styled components
+-----------------------------------------
+gives equal amount of margin both the sides(right, left) and makes the content center
+margin-right:auto;
+margin-left:auto; 
+------------------------------------------
+whenever we work with flex, we can set direction and justify-content
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+React
+---------------
+*In react-router-dom v6, "Switch" is replaced by routes "Routes".
+*In react-router-dom, you also do not need to use the exact in the Route declaration.
+*ReactDOM.render is no longer supported in React 18 - Use createRoot instead.
+	- ReactDOM.createRoot(document.getElementById('root'))
+
+Dependencies
+--------------------------
+npm add react-router-dom
+
+
+
+
+
+
+
+Websites
+------------------
+https://www.colorhexa.com/
