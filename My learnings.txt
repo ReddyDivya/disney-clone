@@ -1,20 +1,22 @@
 My Learnings while developing disney-clone
 
 images
-------------------
+------------------------------------------------
 use svg for clarity
 
 CSS
------------
+------------------------------------------------
 scroll-behavior: smooth;
 box-sizing: border-box;
 media-queries
 install styled components
------------------------------------------
+----------------------------------------------------------------------------------
+Even if it's in a smaller screen never keep width and height < 20
+----------------------------------------------------------------------------------
 gives equal amount of margin both the sides(right, left) and makes the content center
 margin-right:auto;
 margin-left:auto; 
-------------------------------------------
+-----------------------------------------------------------------------------------
 whenever we work with flex, we can set direction and justify-content
 display:flex;
 flex-direction:column;
