@@ -1,5 +1,9 @@
 My Learnings while developing disney-clone
 
+Issues resolved links
+----------------------------------
+https://stackoverflow.com/questions/70445014/module-not-found-error-package-path-is-not-exported-from-package
+
 images
 ------------------------------------------------
 use svg for clarity
@@ -32,11 +36,6 @@ React
 Dependencies
 --------------------------
 npm add react-router-dom
-
-
-
-
-
 
 
 Websites
