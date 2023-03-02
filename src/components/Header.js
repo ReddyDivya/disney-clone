@@ -6,8 +6,9 @@ const Header = (props) => {
         <Nav>
             <Logo><img src="/images/logo.svg" alt="Disney+" /></Logo>
             <NavMenu>
-                <a href="/home"><img src="/images/home-icon.svg" alt="Home" /></a>
-                <span>HOME</span>
+                <a href="/home"><img src="/images/home-icon.svg" alt="Home" />
+                    <span>HOME</span>
+                </a>
             </NavMenu>
 
         </Nav>
@@ -25,7 +26,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:0 36px;
-letter-spacing:16px;
 z-index:3;
 `
 
@@ -74,14 +74,14 @@ a{
         line-height:1.08;
         padding:2px 0px;
         white-space:nowrap;
-        position:relative;  
+        position:relative;
     
         &:before{
             background-color:rgb(249, 249, 249);
             border-radius:0px 0px 4px 4px;
             bottom:-6px;
-            left:0px;
             content:"";
+            left:0px;
             height:2px;
             opacity:0;
             position:absolute;
@@ -101,10 +101,6 @@ a{
             opacity:1 !important;
         }
     }
-}
-
-@media (max-width: 768px){
-    display:none;
 }
 `
 
