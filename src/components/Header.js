@@ -75,11 +75,12 @@ a{
         padding:2px 0px;
         white-space:nowrap;
         position:relative;
+        margin-bottom:-4px;
     
         &:before{
             background-color:rgb(249, 249, 249);
             border-radius:0px 0px 4px 4px;
-            bottom:-6px;
+            bottom:-5px;
             content:"";
             left:0px;
             height:2px;
