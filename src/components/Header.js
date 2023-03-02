@@ -87,7 +87,7 @@ a{
         font-size:13px;
         letter-spacing:1.42px;
         line-height:1.08;
-        padding:2px 0px;
+        padding:2px 3px;
         white-space:nowrap;
         position:relative;
         margin-bottom:-4px;
