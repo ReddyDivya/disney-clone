@@ -1,12 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
 import { auth, provider } from "../firebase";
+import { useDispatch, useSelector } from "react-redux"; //these are helpers
+import { useHistory } from "react-router-dom"; //
+import { auth, provider } from "../firebase";
+import { selectUserName, selectUserPhoto, setUserLoginDetails } from "../features/user/userSlice";
+
+/*
+useDispatch - allow us to dispatch actions to a store
+useSelector - allow us to retrieve data from a store
+*/
 
 const Header = (props) => {
 
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const username = useSelector(selectUserName); //putting info to store
+    const userPhoto = useSelector(selectUserPhoto);  //putting info to store
+
     const handleAuth = () => {
         auth.signInWithPopup(provider).then((result) => {
-            console.log(result)
+            setUser(result.user);//allows to set a new user
         }).catch((error) => {
             alert(error.message)
         })
