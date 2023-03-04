@@ -2,8 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux"; //these are helpers
-import { useHistory } from "react-router-dom"; //
-import { auth, provider } from "../firebase";
+import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setUserLoginDetails } from "../features/user/userSlice";
 
 /*
@@ -14,42 +13,55 @@ useSelector - allow us to retrieve data from a store
 const Header = (props) => {
 
     const dispatch = useDispatch();
-    const history = useHistory();
+    const history = useNavigate();
     const username = useSelector(selectUserName); //putting info to store
     const userPhoto = useSelector(selectUserPhoto);  //putting info to store
 
+    //login functionality
     const handleAuth = () => {
         auth.signInWithPopup(provider).then((result) => {
             setUser(result.user);//allows to set a new user
         }).catch((error) => {
-            alert(error.message)
-        })
+            alert(error.message);//shows an error
+        });
+    };
+
+    const setUser = (user) => {
+        dispatch(
+            setUserLoginDetails({
+                name: user.displayName,
+                email: user.email,
+                photo: user.photoURL,
+            })
+        );
     }
 
     return (
         <Nav>
             <Logo><img src="/images/logo.svg" alt="Disney+" /></Logo>
-            <NavMenu>
-                <a href="/home"><img src="/images/home-icon.svg" alt="Home" />
-                    <span>HOME</span>
-                </a>
-                <a href="/search"><img src="/images/search-icon.svg" alt="Search" />
-                    <span>SEARCH</span>
-                </a>
-                <a href="/watchlist"><img src="/images/watchlist-icon.svg" alt="Watchlist" />
-                    <span>WATCHLIST</span>
-                </a>
-                <a href="/originals"><img src="/images/original-icon.svg" alt="Originals" />
-                    <span>ORIGINALS</span>
-                </a>
-                <a href="/movies"><img src="/images/movie-icon.svg" alt="Movies" />
-                    <span>MOVIES</span>
-                </a>
-                <a href="/series"><img src="/images/series-icon.svg" alt="Series" />
-                    <span>SERIES</span>
-                </a>
-            </NavMenu>
-            <Login onClick={handleAuth}>Login</Login>
+            {!username ? <Login onClick={handleAuth}>Login</Login> : <>
+                <NavMenu>
+                    <a href="/home"><img src="/images/home-icon.svg" alt="Home" />
+                        <span>HOME</span>
+                    </a>
+                    <a href="/search"><img src="/images/search-icon.svg" alt="Search" />
+                        <span>SEARCH</span>
+                    </a>
+                    <a href="/watchlist"><img src="/images/watchlist-icon.svg" alt="Watchlist" />
+                        <span>WATCHLIST</span>
+                    </a>
+                    <a href="/originals"><img src="/images/original-icon.svg" alt="Originals" />
+                        <span>ORIGINALS</span>
+                    </a>
+                    <a href="/movies"><img src="/images/movie-icon.svg" alt="Movies" />
+                        <span>MOVIES</span>
+                    </a>
+                    <a href="/series"><img src="/images/series-icon.svg" alt="Series" />
+                        <span>SERIES</span>
+                    </a>
+                </NavMenu>
+                <UserImage src={userPhoto} alt={userName} />
+            </>}
         </Nav>
     )
 }

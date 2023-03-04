@@ -4,6 +4,8 @@ Issues resolved links
 ----------------------------------
 https://stackoverflow.com/questions/70445014/module-not-found-error-package-path-is-not-exported-from-package
 
+https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
+
 images
 ------------------------------------------------
 use svg for clarity
