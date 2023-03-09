@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
 import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux"; //these are helpers
@@ -16,6 +16,15 @@ const Header = (props) => {
     const history = useNavigate();
     const userName = useSelector(selectUserName); //putting info to store
     const userPhoto = useSelector(selectUserPhoto);  //putting info to store
+
+    useEffect(() => {
+        auth.onAuthStateChanged(async (user) => {
+            if (user) {
+                setUser(user)
+                history.push('/home')
+            }
+        })
+    }, [userName])
 
     //login functionality
     const handleAuth = () => {
