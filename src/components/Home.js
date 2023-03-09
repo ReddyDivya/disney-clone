@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import ImgSlider from "./ImgSlider";
 
 const Home = (props) => {
     return <Container>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
+        <ImgSlider />
     </Container>
 }
 
