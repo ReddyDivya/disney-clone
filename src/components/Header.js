@@ -20,6 +20,7 @@ const Header = (props) => {
     //login functionality
     const handleAuth = () => {
         auth.signInWithPopup(provider).then((result) => {
+            console.log(result.user);
             setUser(result.user);//allows to set a new user
         }).catch((error) => {
             alert(error.message);//shows an error
@@ -60,7 +61,7 @@ const Header = (props) => {
                         <span>SERIES</span>
                     </a>
                 </NavMenu>
-                <UserImage src={userPhoto} alt={userName} />
+                {/* <UserImage src={userPhoto} alt={userName} /> */}
             </>}
         </Nav>
     )
