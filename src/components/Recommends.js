@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
+import Link from "react-router-dom";
 
 const Recommends = (props) => {
     return (
         <Container>
             <h4>Recommended for You</h4>
             <Content>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+                <Wrap>
+                    <Link to="/">
+                        <img src="" alt="" />
+                    </Link>
+                </Wrap>
             </Content>
         </Container>
     )
@@ -28,6 +30,10 @@ const Content = styled.div`
     @media (max-width:768px){
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+`;
+
+const Wrap = styled.div`
+
 `;
 
 export default Recommends;
