@@ -8,7 +8,7 @@ import store from "./app/store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    /* App can use the redux store */
+    /* App.js can use the redux store */
     <Provider store={store}>
       <App />
     </Provider>
