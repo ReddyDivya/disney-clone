@@ -1,3 +1,5 @@
+/* Created redux state slice for getting google user */
+
 import { createSlice } from '@reduxjs/toolkit';
 
 
