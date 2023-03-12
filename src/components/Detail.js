@@ -18,6 +18,9 @@ const Detail = () => {
             <img src="/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
           </Trailer>
+          <Addlist>
+            <span>+</span>
+          </Addlist>
         </Controls>
       </ContentMeta>
     </Container>
@@ -71,7 +74,6 @@ const ImageTitle = styled.div`
 
 const ContentMeta = styled.div`
   max-width:874px;
-
 `;
 
 const Controls = styled.div`
@@ -125,5 +127,8 @@ const Trailer = styled(Player)`
   color: rgb(249, 249, 249);
 `;
 
+const Addlist = styled.div`
+  
+`;
 
 export default Detail;
