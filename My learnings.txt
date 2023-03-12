@@ -2,6 +2,10 @@ My Learnings while developing disney-clone
 
 Issues resolved links
 ----------------------------------
+Fixed: Unable to login firebase in vscode
+	- https://www.youtube.com/watch?v=sFrfhJXd_EE&ab_channel=WafaaDz
+	- https://www.youtube.com/watch?v=qz5YjfG3BYI&ab_channel=Ali
+
 https://stackoverflow.com/questions/70445014/module-not-found-error-package-path-is-not-exported-from-package
 
 https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
