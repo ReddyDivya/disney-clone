@@ -22,6 +22,11 @@ const Detail = () => {
             <span />
             <span />
           </Addlist>
+          <GroupWatch>
+            <div>
+              <img src="/images/group-icon.png" alt="" />
+            </div>
+          </GroupWatch>
         </Controls>
       </ContentMeta>
     </Container>
@@ -157,5 +162,7 @@ const Addlist = styled.div`
     }
   }
 `;
+
+const GroupWatch = styled(Addlist)``;
 
 export default Detail;
