@@ -10,7 +10,9 @@ const Detail = () => {
       </ImageTitle>
       <ContentMeta>
         <Controls>
-          controls
+          <Player>
+            <img src="/images/play-icon-black.png" alt="" />
+          </Player>
         </Controls>
       </ContentMeta>
     </Container>
@@ -73,6 +75,10 @@ const Controls = styled.div`
   flex-flow:row nowrap;
   margin:24px 0px;
   min-height:56px;
+`;
+
+const Player = styled.div`
+
 `;
 
 
