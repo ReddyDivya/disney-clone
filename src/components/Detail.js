@@ -12,6 +12,7 @@ const Detail = () => {
         <Controls>
           <Player>
             <img src="/images/play-icon-black.png" alt="" />
+            <span>Play</span>
           </Player>
         </Controls>
       </ContentMeta>
@@ -77,8 +78,22 @@ const Controls = styled.div`
   min-height:56px;
 `;
 
-const Player = styled.div`
-
+const Player = styled.button`
+  font-size:15px;
+  margin:0px 22px 0px 0px;
+  padding: 0px 24px;
+  height:56px;
+  border-radius:4px;
+  align-items:center;
+  cursor:pointer;
+  display:flex;
+  justify-content:center;
+  letter-spacing:1.8px;
+  text-align:center;
+  text-transform:uppercase;
+  background:rgb(249, 249,249);
+  border:none;
+  color:rgb(0, 0, 0);
 `;
 
 
