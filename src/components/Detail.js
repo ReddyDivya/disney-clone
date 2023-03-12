@@ -19,7 +19,8 @@ const Detail = () => {
             <span>Trailer</span>
           </Trailer>
           <Addlist>
-            <span>+</span>
+            <span />
+            <span />
           </Addlist>
         </Controls>
       </ContentMeta>
@@ -128,7 +129,33 @@ const Trailer = styled(Player)`
 `;
 
 const Addlist = styled.div`
+  margin-right:16px;
+  height:44px;
+  width:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:rgba(0,0,0,0.6);
+  border-radius:50%;
+  border:2px solid rgb(249, 249, 249);
+  cursor:pointer;
   
+  span{
+    background-color:rgb(249, 249, 249);
+    display:inline-block;
+
+    &:first-child{
+      height:2px;
+      transform: translate(1px 0px) rotate(0deg);
+      width:16px;
+    }
+
+    &:nth-child(2){
+      height:16px;
+      transform: translateX(-8px) rotate(0deg);
+      width:2px;
+    }
+  }
 `;
 
 export default Detail;
