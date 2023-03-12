@@ -163,6 +163,22 @@ const Addlist = styled.div`
   }
 `;
 
-const GroupWatch = styled(Addlist)``;
+const GroupWatch = styled.div`
+  height:44px;
+  width:44px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  background:rgb(255, 255, 255);
+
+  div{
+    height:40px;
+    width:40px;
+    background:rgb(0, 0, 0);
+    border-radius:50%;
+  }
+`;
 
 export default Detail;
