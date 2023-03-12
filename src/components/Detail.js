@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import db from "../firebase";
 
-const Detail = () => {
+const Detail = (props) => {
+
+  const { id } = useParams();
+  const [detailData, setDetailData] = useState({});
+
+  useEffect(() => {
+
+    //movies is a collection name of the firebase db
+    db.collection("movies").doc(id).get().then((doc) => {
+      //docs is a list of records of the firebase db
+      if (doc.exists) {
+        //doc is an individual records of the firebase db
+        //type is field name
+        //...doc.data() - this means entire data
+        setDetailData(doc.data());
+      }
+      else {
+        console.log("no such document in firebase 🔥");
+      }
+    })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  }, [id]); //update it when id gets updated
+
+
   return (
     <Container>
-      <Background><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2A509165105A09F9F533E2008B143BCF38D6A5859D0EBB40CCA388772005CD94/scale?width=1440&aspectRatio=1.78&format=jpeg" alt="" /></Background>
+      <Background>
+        <img alt={detailData.title} src={detailData.backgroundImg} />
+      </Background>
       <ImageTitle>
-        <img alt="" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/DD8BBA864E290FBC03A244A488FFC8DC8365FBF2F95A122B1D57BF3772D717FD/scale?width=1440&aspectRatio=1.78" />
+        <img alt={detailData.title} src={detailData.titleImg} />
       </ImageTitle>
       <ContentMeta>
         <Controls>
           <Player>
-            <img src="/images/play-icon-black.png" alt="" />
+            <img alt={detailData.title} src={detailData.titleImg} />
             <span>Play</span>
           </Player>
           <Trailer>
@@ -29,10 +58,10 @@ const Detail = () => {
           </GroupWatch>
         </Controls>
         <SubTitle>
-          SubTitle
+          {detailData.subTitle}
         </SubTitle>
         <Description>
-          Description
+          {detailData.description}
         </Description>
       </ContentMeta>
     </Container>
