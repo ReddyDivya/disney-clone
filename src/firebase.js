@@ -1,11 +1,9 @@
-import firebase from 'firebase/compat/app';
-import { initializeApp } from 'firebase-admin/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import 'firebase/compat/storage';
+import firebase from 'firebase';
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+
     apiKey: "AIzaSyAd97UTsdBIU1NMpoPjf8aQDBm1MTxsuUQ",
     authDomain: "disneyplus-clone-b784f.firebaseapp.com",
     projectId: "disneyplus-clone-b784f",
@@ -16,7 +14,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+// Use this to initialize the firebase App
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();

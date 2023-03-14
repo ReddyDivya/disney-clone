@@ -4,6 +4,8 @@ import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux"; //these are helpers
 import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
+import { Link } from "react-router-dom";
+
 
 /*
 useDispatch - allow us to dispatch actions to a store
@@ -61,16 +63,20 @@ const Header = (props) => {
             {!userName ? <Login onClick={handleAuth}>Login</Login> : (
                 <>
                     <NavMenu>
-                        <a href="/home"><img src="/images/home-icon.svg" alt="Home" />
+                        {/* <a href={Home}><img src="/images/home-icon.svg" alt="Home" />
                             <span>HOME</span>
-                        </a>
+                        </a> */}
+                        <Link to='/Home'>
+                            <img src="/images/home-icon.svg" alt="Home" />
+                            <span>HOME</span>
+                        </Link>
                         <a href="/search"><img src="/images/search-icon.svg" alt="Search" />
                             <span>SEARCH</span>
                         </a>
                         <a href="/watchlist"><img src="/images/watchlist-icon.svg" alt="Watchlist" />
                             <span>WATCHLIST</span>
                         </a>
-                        <a href="/originals"><img src="/images/original-icon.svg" alt="Originals" />
+                        <a href="/Originals"><img src="/images/original-icon.svg" alt="Originals" />
                             <span>ORIGINALS</span>
                         </a>
                         <a href="/movies"><img src="/images/movie-icon.svg" alt="Movies" />
