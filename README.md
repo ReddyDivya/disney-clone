@@ -1,3 +1,3 @@
 ## Demo
 
-https://rd-disneyplusclone.netlify.app/
+[Disney+ Clone](https://rd-disneyplusclone.netlify.app/)
