@@ -1,3 +1,3 @@
 ## Demo
 
-https://disneyplus-clone-b784f.web.app/
+[Disney+ Clone](https://rd-disneyplusclone.netlify.app/)
