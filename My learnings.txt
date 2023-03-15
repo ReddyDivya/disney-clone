@@ -5,7 +5,7 @@ Issues resolved links
 Unable to login firebase in vscode
 	- https://www.youtube.com/watch?v=sFrfhJXd_EE&ab_channel=WafaaDz
 
-Firebase Hosting - Shows Welcome Screen Instead of index.html (Solved)
+Firebase Hosting - Shows Welcome Screen Instead of index.html
 	- https://www.youtube.com/watch?v=CwZ0L2PP0u0&ab_channel=IsrafilHossen
 	- https://www.youtube.com/watch?v=qz5YjfG3BYI&ab_channel=Ali
 

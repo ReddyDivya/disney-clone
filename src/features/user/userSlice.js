@@ -15,8 +15,11 @@ const userSlice = createSlice({
     initialState,
     reducers: {
 
+        //Get a user's profile
         //whenever a user logs in, the data should be stored
         setUserLoginDetails: (state, action) => {
+
+            //Getting user's profile details.
             state.name = action.payload.name;
             state.email = action.payload.email;
             state.photo = action.payload.photo;

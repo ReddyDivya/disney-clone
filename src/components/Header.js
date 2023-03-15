@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
 import { Link } from "react-router-dom";
 
-
 /*
 useDispatch - allow us to dispatch actions to a store
 useSelector - allow us to retrieve data from a store
@@ -31,9 +30,10 @@ const Header = (props) => {
     //login functionality
     const handleAuth = () => {
         if (!userName) {
+
             auth.signInWithPopup(provider).then((result) => {
-                console.log(result.user);
-                setUser(result.user);//allows to set a new user
+                // The signed-in user info.
+                setUser(result.user);//sets user info
             }).catch((error) => {
                 alert(error.message);//shows an error
             });
@@ -63,9 +63,6 @@ const Header = (props) => {
             {!userName ? <Login onClick={handleAuth}>Login</Login> : (
                 <>
                     <NavMenu>
-                        {/* <a href={Home}><img src="/images/home-icon.svg" alt="Home" />
-                            <span>HOME</span>
-                        </a> */}
                         <Link to='/Home'>
                             <img src="/images/home-icon.svg" alt="Home" />
                             <span>HOME</span>

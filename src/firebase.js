@@ -1,6 +1,5 @@
 import firebase from 'firebase';
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
 
@@ -14,11 +13,19 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// Use this to initialize the firebase App
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+// Initialize Cloud Firestore and get a reference to the service
+/*Cloud Firestore stores data in Documents, which are stored in Collections.*/
 const db = firebaseApp.firestore();
+
+// Initialize Firebase Authentication and get a reference to the service
+/*Firebase Authentication to allow users to sign in to our app using one or more sign-in methods(email & password*/
 const auth = firebase.auth();
+
+// Users authenticate with Firebase using their Google Accounts
 const provider = new firebase.auth.GoogleAuthProvider();
+
 const storage = firebase.storage();
 
 export { auth, provider, storage };

@@ -1,7 +1,6 @@
 //redux to store information that we fetched from google
 import { configureStore } from '@reduxjs/toolkit'
 import logger from 'redux-logger';
-// import rootReducer from './reducer';
 import userReducer from "../features/user/userSlice";
 import movieReducer from "../features/movie/movieSlice";
 
