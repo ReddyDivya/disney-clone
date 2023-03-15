@@ -1,5 +1,6 @@
 ## Demo
 
+![Disney+clone](https://user-images.githubusercontent.com/34181144/225318242-7dd55f92-4ca4-4ab9-9ee3-d2302113b288.gif)
 [Disney+ Clone](https://rd-disneyplusclone.netlify.app/)
 
 ## Redux 
