@@ -14,8 +14,15 @@ const initialState = {
 const movieSlice = createSlice({
     name: 'movie',
     initialState,
-    reducers: {
 
+    //Reducer function is to define how the state can be updated.
+    reducers: {
+        /*
+        Redux Toolkit allows us to write "mutating" logic in reducers. It
+        doesn't actually mutate the state because it uses the Immer library,
+        which detects changes to a "draft state" and produces a brand new
+        immutable state based off those changes
+        */
         //Getting movies information
         setMovies: (state, action) => {
 
@@ -28,6 +35,8 @@ const movieSlice = createSlice({
     }
 });
 
+// Action creators are generated for each case reducer function.
+//exporting the generated Redux action creators and the reducer function for the whole slice.
 export const { setMovies } = movieSlice.actions;
 
 export const selectRecommend = (state) => state.movie.recommend;
