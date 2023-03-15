@@ -8,7 +8,7 @@ import movieReducer from "../features/movie/movieSlice"; //importing movie slice
 //This creates a Redux store, and also automatically configure the Redux DevTools extension.
 export default configureStore({
     reducer: {
-        //Adding Slice Reducers to the Store
+        //Adding Slice Reducers to the Store to handle all updates to that state.
         user: userReducer,
         movie: movieReducer,
     },
