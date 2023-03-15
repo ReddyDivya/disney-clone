@@ -14,36 +14,43 @@ useSelector - allow us to retrieve data from a store
 const Header = (props) => {
 
     const dispatch = useDispatch();
-    const history = useNavigate();
+
+    //The react-router hook returns a function that lets you navigate.
+    const navigate = useNavigate();
     const userName = useSelector(selectUserName); //putting info to store
     const userPhoto = useSelector(selectUserPhoto);  //putting info to store
 
     useEffect(() => {
         auth.onAuthStateChanged(async (user) => {
+
+            //Currently signed-in user. If a user isn't signed in, user is null:
             if (user) {
                 setUser(user)
-                history('/home')
+                navigate('/home')
             }
         })
-    }, [userName])
+    }, [userName]) //runs this functionality when username changes
 
-    //login functionality
+    //sign in with a google account
     const handleAuth = () => {
         if (!userName) {
 
+            //To sign in with a pop-up window, call signInWithPopup(auth, provider)
             auth.signInWithPopup(provider).then((result) => {
                 // The signed-in user info.
                 setUser(result.user);//sets user info
             }).catch((error) => {
-                alert(error.message);//shows an error
+                // Handle Errors here.
+                alert(error.message);//shows an error message
             });
         }
         else if (userName) {
+            //Sign out
             auth.signOut().then(() => {
                 dispatch(setSignOutState())
-                history('/')
+                navigate('/')
             })
-                .catch((err) => alert(err.message));
+                .catch((err) => alert(err.message)); // Handle Errors here.
         }
     };
 
