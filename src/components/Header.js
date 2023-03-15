@@ -6,9 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
 import { Link } from "react-router-dom";
 
-
 //React-Redux hooks to let React components interact with the Redux store.
 
+/*
+The <Header> component will see the new state value from the store and 
+re-render itself with the new data
+*/
 const Header = (props) => {
 
     //useDispatch() - allow us to dispatch actions to a store.
@@ -56,7 +59,11 @@ const Header = (props) => {
     };
 
     const setUser = (user) => {
+
+        //The corresponding Redux action will be dispatched to the store.
         dispatch(
+
+            //The slice reducer will see the actions and update its state.
             setUserLoginDetails({
                 name: user.displayName,
                 email: user.email,

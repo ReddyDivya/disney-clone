@@ -11,6 +11,10 @@ import db from "../firebase"; //using database from firebase
 import { setMovies } from "../features/movie/movieSlice";
 import { selectUserName } from "../features/user/userSlice";
 
+/*
+The <Home> component will see the new state value from the store and 
+re-render itself with the new data
+*/
 const Home = (props) => {
 
     const dispatch = useDispatch();
@@ -31,7 +35,7 @@ const Home = (props) => {
                 //...doc.data() - this means entire data
                 switch (doc.data().type) {
                     case "recommend":
-                        recommends = [...recommends, { id: doc.id, ...doc.data() }]; //...recommends - keep the existing, {object} - add new record to it
+                        recommends = [...recommends, { id: doc.id, ...doc.data() }];
                         break;
 
                     case "new":
@@ -48,7 +52,10 @@ const Home = (props) => {
                 }
             });
 
+            //The corresponding Redux action will be dispatched to the store.
             dispatch(
+
+                //The slice reducer will see the actions and update its state.
                 setMovies({
                     recommend: recommends,
                     newDisney: newDisneys,
