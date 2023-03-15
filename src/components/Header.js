@@ -6,19 +6,20 @@ import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
 import { Link } from "react-router-dom";
 
-/*
-useDispatch - allow us to dispatch actions to a store
-useSelector - allow us to retrieve data from a store
-*/
+
+//React-Redux hooks to let React components interact with the Redux store.
 
 const Header = (props) => {
 
+    //useDispatch() - allow us to dispatch actions to a store.
     const dispatch = useDispatch();
 
     //The react-router hook returns a function that lets you navigate.
     const navigate = useNavigate();
-    const userName = useSelector(selectUserName); //putting info to store
-    const userPhoto = useSelector(selectUserPhoto);  //putting info to store
+
+    //useSelector() - we can read data from the store.
+    const userName = useSelector(selectUserName);
+    const userPhoto = useSelector(selectUserPhoto);
 
     useEffect(() => {
         auth.onAuthStateChanged(async (user) => {
