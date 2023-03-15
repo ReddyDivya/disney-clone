@@ -1,15 +1,15 @@
-/* Created redux state slice for getting google user */
-
+//Create a Redux State Slice
+//This user state slice is for getting user
 import { createSlice } from '@reduxjs/toolkit';
 
-
-//empty states
+//initial state value
 const initialState = {
     name: "",
     email: "",
     photo: "",
 };
 
+//userSlice is string name to identify the slice
 const userSlice = createSlice({
     name: "user",
     initialState,

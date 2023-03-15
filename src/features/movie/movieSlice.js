@@ -1,7 +1,8 @@
-/* Created redux state slice for getting movies */
-
+//Create a Redux State Slice
+//This movie state slice is for getting movies
 import { createSlice } from "@reduxjs/toolkit";
 
+//initial state value
 const initialState = {
     recommend: null,
     newDisney: null,
@@ -9,6 +10,7 @@ const initialState = {
     trending: null,
 }
 
+//movieSlice is string name to identify the slice
 const movieSlice = createSlice({
     name: 'movie',
     initialState,
