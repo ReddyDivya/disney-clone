@@ -1,4 +1,8 @@
-//Redux store
+/*
+Creates a Redux store that holds the complete state tree of our app.
+There should only be a single store in your app.
+*/
+
 import { configureStore } from '@reduxjs/toolkit'
 import logger from 'redux-logger';
 import userReducer from "../features/user/userSlice"; //importing user slice
