@@ -1,6 +1,6 @@
 ## Demo
 
-[Disney+ Clone](https://rd-disneyplusclone.netlify.app/)
+[Disney+ Clone](https://disneyplus-clone-b784f.web.app/)
 
 ## Redux 
 
