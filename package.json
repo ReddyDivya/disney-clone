@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-styled-components": "^0.1.11",
+    "react-youtube": "^10.1.0",
     "redux-logger": "^3.0.6",
     "slick-carousel": "^1.8.1",
     "steam": "^1.4.1",
@@ -23,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT= 3027 && react-scripts start",
+    "start": "set PORT= 3002 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

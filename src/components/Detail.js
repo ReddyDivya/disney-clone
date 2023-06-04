@@ -28,7 +28,6 @@ const Detail = (props) => {
       })
   }, [id]); //update it when id gets updated
 
-
   return (
     <Container>
       <Background>
