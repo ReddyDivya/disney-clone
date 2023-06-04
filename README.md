@@ -1,6 +1,12 @@
 ## Demo
 
+<<<<<<< HEAD
 [Disney+ Clone](https://disneyplus-clone-b784f.web.app/)
+=======
+![Disney+clone](https://user-images.githubusercontent.com/34181144/225318242-7dd55f92-4ca4-4ab9-9ee3-d2302113b288.gif)
+
+<!-- [Disney+ Clone](https://rd-disneyplusclone.netlify.app/) -->
+>>>>>>> fe6653cb4468bebff5f9c9386a503838b2e70a2e
 
 ## Redux 
 
